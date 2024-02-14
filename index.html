@@ -3,32 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Style -->
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
   <title>Template Grid</title>
 </head>
   <body>
     <div class="grid-container">
       
+
       <!-- Header -->
       <header class="item" style="grid-area: header;">
-        <H2>Header</H2>
+        <p class="logo">Def Leppard</p>
+        <nav>
+          <a href="">Song</a>
+        </nav>
       </header>
+
+
+      <!-- Hero -->
+      <section class="item" id="hero" style="grid-area: hero;">
+        <H1> The Story So Far </H1>
+      </section>
+
+
+      <!-- Content Artist -->
+      <section class="item" id="artist" style="grid-area: artist;">
+        <div class="img-container">
+          
+        </div>
+        <H2>Def Leppard</H2><br>
+        <p>Is a British rock band formed in Sheffield in 1977. Initially comprised of Rick Savage, Tony Kenning, and Pete Willis, the band underwent lineup changes before releasing their debut album, "On Through the Night," in 1980. The classic Def Leppard lineup solidified with the addition of vocalist Joe Elliott, guitarist Phil Collen, and drummer Rick Allen.</p>
+      </section>
+
+
+      <!-- Albums -->
+      <section class="item" style="grid-area: album-1;">
+          <p>1981</p>
+          <H2>High 'n' Dry"</H2><br>
+          <hr><br>
+          <p>Def Leppard's second album, "High 'n' Dry," captures their transition from raw rock to a refined sound. Though not as commercially successful, it features fan favorites like "Bringin' On the Heartbreak" and sets the foundation for their future success in hard rock.</p>
+      </section>
+    
+      <section class="item" style="grid-area: album-2;">
+          <p>1983</p>
+          <H2>Pyromania</H2><br>
+          <hr><br>
+          <p>"Pyromania" marked a pivotal moment, showcasing Def Leppard's more accessible sound. Produced by Mutt Lange, it includes hits like "Photograph" and "Rock of Ages," propelling the band into mainstream success.</p>
+      </section>
+
+      <section class="item" style="grid-area: album-3;">
+          <p>1987</p>
+          <H2>Hysteria</H2><br>
+          <hr><br>
+          <p>Def Leppard's "Hysteria" is a landmark album known for its polished production and hit singles like "Pour Some Sugar On Me." The diverse sound and meticulous production set a new standard in late 1980s rock.</p>
+      </section>
       
-      <!-- Main Content -->
-      <main class="item" style="grid-area: main;">
-        <h2>Main</h2>
-      </main>
-      
+
       <!-- Sidebar -->
       <sidebar class="item" style="grid-area: sidebar;">
-        <h2>Sidebar</h2>
+        <a class="frontpage">
+          <img src="img/frontpage.jpeg" alt="Def Leppard">
+        </a>
+        <hr><br>
+        <p>Def Leppard's "Hysteria" is a landmark album known for its polished production and hit singles like "Pour Some Sugar On Me." The diverse sound and meticulous production set a new standard in late 1980s rock.</p>
       </sidebar>
       
+
       <!-- Footer -->
       <footer class="item" style="grid-area: footer;">
-        <h2>Footer</h2>
+        <p>&copy;Kamiokandeep</p>
       </footer>
 
     </div>    
   </body>
 </html>
+<!--https://i.ebayimg.com/images/g/aBsAAOSwI~xjKpL2/s-l1600.jpg-->
+<!--https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/94f8a075898307.5c59e2c6696d1.jpg-->

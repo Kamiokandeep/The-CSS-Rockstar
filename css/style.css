@@ -7,38 +7,154 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+
 .grid-container {
     width: 95%;
-    margin: 10px auto;
+    margin: 0px auto 0px auto;
     display: grid;
     grid-gap: 5px;
     grid-template-areas:
         "header header header"
-        "main main sidebar"
+        "hero hero hero"
+        "artist artist artist"
+        "album-1 album-1 sidebar"
+        "album-2 album-2 sidebar"
+        "album-3 album-3 sidebar"
         "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 14fr 3fr;
 }
 
 .item {
-    border: 1px solid #ccc;
-    padding: 5px;
+    padding: 10px;
 }
 
+
+/* ----------
+   CSS Header 
+   ---------- */
 .item[style*="grid-area: header"] {
-    background-color: #333;
+    background-color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item[style*="grid-area: header"] .logo {
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: black;
+}
+
+.item[style*="grid-area: header"] .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.item[style*="grid-area: header"] a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.item[style*="grid-area: header"] a:hover {
+    color: rgb(103, 0, 0);
+}
+
+
+/* ----------
+    CSS Hero 
+   ---------- */
+.item[style*="grid-area: hero"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+        ),url("/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ------------
+    CSS Artist
+   ------------ */
+.item[style*="grid-area: artist"] {
+    text-align: center;
+    color: black;
+    padding: 100px 12px;
+    height: 30vh;
+}
+
+
+/* ------------
+    CSS Albums
+   ------------ */
+.item[style*="grid-area: album-1"] {
+    text-align: center;
+    padding: 50px 12px;
+    background-color: #000000;
     color: white;
 }
 
+.item[style*="grid-area: album-2"] {
+    text-align: center;
+    padding: 50px 12px;
+    background-color: #000000;
+    color: white;
+}
+
+.item[style*="grid-area: album-3"] {
+    text-align: center;
+    padding: 50px 12px;
+    background-color: #000000;
+    color: white;
+}
+
+
+/* --------------
+    CSS Sidebar
+   -------------- */ 
 .item[style*="grid-area: sidebar"] {
-    background-color: #ddd;
+    text-align: center;
+    padding: 20px 12px;
+    background-color: #b51f1f;
 }
 
-.item[style*="grid-area: main"] {
-    background-color: #eee;
+.item[style*="grid-area: sidebar"] img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
 }
 
+
+/* ------------
+    CSS Footer
+   ------------ */ 
 .item[style*="grid-area: footer"] {
+    text-align: center;
+    padding: 20px 20px;
     background-color: #333;
     color: white;
 }
@@ -48,14 +164,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-areas:
-            "header header header"
-            "main main main"
-            "sidebar sidebar sidebar"
-            "footer footer footer";
-        grid-template-rows: 1fr 14fr 7fr 3fr;
-    }
+
 }
 
 @media (max-width: 992px) {
