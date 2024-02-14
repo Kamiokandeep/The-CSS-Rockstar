@@ -4,13 +4,25 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    hyphens: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
-p{ font-size: 1.25em;}
+h4{ font-size: 1.4em;}
+p{ font-size: 1.20em;}
 
 .grid-container {
     width: 95%;
@@ -18,14 +30,14 @@ p{ font-size: 1.25em;}
     display: grid;
     grid-gap: 5px;
     grid-template-areas:
-        "header header header"
-        "hero hero hero"
-        "artist artist artist"
-        "album-1 album-1 sidebar"
-        "album-2 album-2 sidebar"
-        "album-3 album-3 sidebar"
-        "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
+        "header header header header"
+        "hero hero hero hero"
+        "artist artist artist artist"
+        "album-1 album-1 sidebar sidebar"
+        "album-2 album-2 sidebar sidebar"
+        "album-3 album-3 sidebar sidebar"
+        "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .item {
@@ -50,24 +62,6 @@ p{ font-size: 1.25em;}
     font-weight: bold;
     font-size: 1.6em;
     color: black;
-}
-
-.item[style*="grid-area: header"] .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-}
-
-.item[style*="grid-area: header"] a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-.item[style*="grid-area: header"] a:hover {
-    color: rgb(103, 0, 0);
 }
 
 
@@ -103,7 +97,7 @@ p{ font-size: 1.25em;}
 .item[style*="grid-area: artist"] {
     text-align: center;
     color: black;
-    padding: 100px 12px;
+    padding: 50px 100px 120px 100px;
     height: 30vh;
 }
 
@@ -112,24 +106,69 @@ p{ font-size: 1.25em;}
     CSS Albums
    ------------ */
 .item[style*="grid-area: album-1"] {
-    text-align: center;
-    padding: 50px 12px;
-    background-color: #000000;
-    color: white;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+.item[style*="grid-area: album-1"] p {
+    font-size: 1em;
+}
+
+.item[style*="grid-area: album-1"] .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item[style*="grid-area: album-1"] img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
 }
 
 .item[style*="grid-area: album-2"] {
-    text-align: center;
-    padding: 50px 12px;
-    background-color: #000000;
-    color: white;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+.item[style*="grid-area: album-2"] p {
+    font-size: 1em;
+}
+
+.item[style*="grid-area: album-2"] .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item[style*="grid-area: album-2"] img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
 }
 
 .item[style*="grid-area: album-3"] {
-    text-align: center;
-    padding: 50px 12px;
-    background-color: #000000;
-    color: white;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+.item[style*="grid-area: album-3"] p {
+    font-size: 1em;
+}
+
+.item[style*="grid-area: album-3"] .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item[style*="grid-area: album-3"] img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
 }
 
 
@@ -137,9 +176,23 @@ p{ font-size: 1.25em;}
     CSS Sidebar
    -------------- */ 
 .item[style*="grid-area: sidebar"] {
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+.item[style*="grid-area: sidebar"] p {
+    font-size: 1em;
+}
+
+.item[style*="grid-area: sidebar"] h4 {
     text-align: center;
-    padding: 20px 12px;
-    background-color: #b51f1f;
+}
+
+.item[style*="grid-area: sidebar"] .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .item[style*="grid-area: sidebar"] img {
@@ -155,7 +208,7 @@ p{ font-size: 1.25em;}
 .item[style*="grid-area: footer"] {
     text-align: center;
     padding: 20px 20px;
-    background-color: #333;
+    background-color: #000000;
     color: white;
 }
 
