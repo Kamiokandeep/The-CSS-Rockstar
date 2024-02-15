@@ -104,6 +104,20 @@ p{ font-size: 1.20em;}
 }
 
 
+/* ----------------
+    CSS Img-Artist
+   ---------------- */
+.item[style*="grid-area: img-artist"] {
+    display: none;
+    background-image: url("../img/poster.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+}
+
+
 /* ------------
     CSS Albums
    ------------ */
@@ -211,7 +225,7 @@ p{ font-size: 1.20em;}
 .item[style*="grid-area: top-footer"] {
     text-align: center;
     color: black;
-    height: 80vh;
+    height: 78vh;
 }
 
 .item[style*="grid-area: top-footer"] p {
@@ -231,18 +245,62 @@ p{ font-size: 1.20em;}
     font-size: 10px;
 }
 
-@media (max-width: 576px) {
+
+
+@media (min-width: 576px) {
+/* ------------
+    CSS Artist
+   ------------ */
+.item[style*="grid-area: artist"] {
+    height: 30vh;
+}
+
+/* ---------------------
+    CSS top-footer note
+   --------------------- */
+.item[style*="grid-area: top-footer"] {
+    height: 65vh;
+}
+}
+
+
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header header header header"
+            "hero hero hero hero"
+            "img-artist img-artist artist artist"
+            "album-1 album-1 sidebar sidebar"
+            "album-2 album-2 sidebar sidebar"
+            "album-3 album-3 sidebar sidebar"
+            "top-footer top-footer top-footer top-footer"
+            "footer footer footer footer";
+    }
+
+    .item[style*="grid-area: img-artist"] {
+        display: block;
+    }
+
+/* ------------
+    CSS Artist
+   ------------ */
+   .item[style*="grid-area: artist"] p {
+        font-size: 1.05em;
+    }
+
+/* ---------------------
+    CSS top-footer note
+   --------------------- */
+   .item[style*="grid-area: top-footer"] {
+        height: 60vh;
+}
+}
+
+@media (min-width: 992px) {
 
 }
 
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
 
 }
