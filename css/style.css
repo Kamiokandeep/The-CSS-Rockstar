@@ -1,3 +1,16 @@
+/*
+CSS Name: The CSS Rockstar 
+Author: Anndriu Useche
+Description: The page features lyrics from a song, with appropriate typography and layout applied using CSS, and also includes a few paragraphs about the artist or band.
+Version: 1.0
+Image attribution:
+Hero: https://i.ebayimg.com/images/g/aBsAAOSwI~xjKpL2/s-l1600.jpg
+Album-1: https://www.musicrecords.cz/upload/catalogue/image/original/big/71hz8n8u9cl-sl1000-1.jpg
+Album-2: https://i.etsystatic.com/15564183/r/il/1bcae9/1356487722/il_1140xN.1356487722_3gih.jpg
+Album-3: https://media.senscritique.com/media/000004837294/source_big/Hysteria.jpg
+Album-4: https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/94f8a075898307.5c59e2c6696d1.jpg
+Sidebar: https://www.udiscovermusic.com/wp-content/uploads/2018/10/The-Story-So-Far_-The-Best-of-Def-Leppard-web-optimised-820-1.jpg
+*/
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +50,7 @@ p{ font-size: 1.20em;}
         "album-1 album-1 album-1 album-1"
         "album-2 album-2 album-2 album-2"
         "album-3 album-3 album-3 album-3"
+        "album-4 album-4 album-4 album-4"
         "sidebar sidebar sidebar sidebar"
         "top-footer top-footer top-footer top-footer"
         "footer footer footer footer";
@@ -101,20 +115,6 @@ p{ font-size: 1.20em;}
     color: black;
     padding: 50px 25px 100px 25px;
     height: 46vh;
-}
-
-
-/* ----------------
-    CSS Img-Artist
-   ---------------- */
-.item[style*="grid-area: img-artist"] {
-    display: none;
-    background-image: url("../img/poster.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 500px;
-    width: 400px;
 }
 
 
@@ -187,6 +187,28 @@ p{ font-size: 1.20em;}
     max-width: 100%;
 }
 
+.item[style*="grid-area: album-4"] {
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+
+.item[style*="grid-area: album-4"] p {
+    font-size: 1em;
+}
+
+.item[style*="grid-area: album-4"] .img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item[style*="grid-area: album-4"] img {
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+}
+
 
 /* --------------
     CSS Sidebar
@@ -248,19 +270,19 @@ p{ font-size: 1.20em;}
 
 
 @media (min-width: 576px) {
-/* ------------
-    CSS Artist
-   ------------ */
-.item[style*="grid-area: artist"] {
-    height: 30vh;
-}
+    /* ------------
+        CSS Artist
+       ------------ */
+    .item[style*="grid-area: artist"] {
+        height: 30vh;
+    }
 
-/* ---------------------
-    CSS top-footer note
-   --------------------- */
-.item[style*="grid-area: top-footer"] {
-    height: 65vh;
-}
+    /* ---------------------
+        CSS top-footer note
+       --------------------- */
+    .item[style*="grid-area: top-footer"] {
+        height: 65vh;
+    }
 }
 
 
@@ -270,37 +292,57 @@ p{ font-size: 1.20em;}
         grid-template-areas:
             "header header header header"
             "hero hero hero hero"
-            "img-artist img-artist artist artist"
+            "artist artist artist artist"
             "album-1 album-1 sidebar sidebar"
             "album-2 album-2 sidebar sidebar"
             "album-3 album-3 sidebar sidebar"
-            "top-footer top-footer top-footer top-footer"
+            "album-4 album-4 top-footer top-footer"
             "footer footer footer footer";
     }
 
-    .item[style*="grid-area: img-artist"] {
-        display: block;
-    }
+    /* ------------
+        CSS Artist
+        ------------ */
+    .item[style*="grid-area: artist"] p {
+            font-size: 1.05em;
+        }
 
-/* ------------
-    CSS Artist
-   ------------ */
-   .item[style*="grid-area: artist"] p {
-        font-size: 1.05em;
+    /* ---------------------
+        CSS top-footer note
+        --------------------- */
+    .item[style*="grid-area: top-footer"] {
+            height: 60vh;
     }
-
-/* ---------------------
-    CSS top-footer note
-   --------------------- */
-   .item[style*="grid-area: top-footer"] {
-        height: 60vh;
-}
 }
 
 @media (min-width: 992px) {
+    .grid-container {
+        grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "artist artist artist artist"
+        "album-1 album-2 sidebar sidebar"
+        "album-3 album-4 sidebar sidebar"
+        "top-footer top-footer top-footer top-footer"
+        "footer footer footer footer";
+    }
 
+    /* ------------
+        CSS Artist
+       ------------ */
+       .item[style*="grid-area: artist"] {
+        height: 20vh;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    /* --------------
+        CSS Sidebar
+    -------------- */ 
+    .item[style*="grid-area: sidebar"] .lyrics {
+        column-count: 2;
+        column-gap: 20px;
+        break-inside: avoid-column;
+    }
 }
 
-@media (min-width: 1200px) {
-
-}
