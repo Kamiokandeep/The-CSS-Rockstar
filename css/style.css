@@ -1,6 +1,6 @@
 /*
 CSS Name: The CSS Rockstar 
-Author: Anndriu Useche
+Author: Anndriu U.
 Description: The page features lyrics from a song, with appropriate typography and layout applied using CSS, and also includes a few paragraphs about the artist or band.
 Version: 1.0
 Image attribution:
@@ -18,7 +18,6 @@ Sidebar: https://www.udiscovermusic.com/wp-content/uploads/2018/10/The-Story-So-
 
 body {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     line-height: 1.4;
